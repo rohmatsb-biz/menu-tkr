@@ -1,0 +1,106 @@
+#!/bin/bash
+# =========================================
+# Menu For Script
+# Edition : Stable Edition V2.0
+# Auther  : TekiroVpn X LynzVpn X ProfAmpoh
+# (C) Copyright 2023-2024
+# =========================================
+clear
+RED='\033[0;31m'
+NC='\e[0m'
+gray="\e[1;30m"
+PURPLE='\033[0;35m'
+Blue="\033[1;36m"
+GREEN='\033[0;32m'
+
+BGX="\033[42m"
+UPDATE="https://aio.tekirovpn.my.id/"
+#BOT="https://raw.githubusercontent.com/myridwan/src/ipuk/"
+UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
+clear
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "   $PURPLE                 MENU SYSTEM            $NC"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e ""
+echo -e " ${NC}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${Blue}    1.)${NC} ☞ Running$NC         ${Blue} 11.)${NC} ☞ Auto Backup ${NC}"
+echo -e "  ${Blue}    2.)${NC} ☞ Instal UDP $NC     ${Blue} 12.)${NC} ☞ Info Vps ${BIBlue}       ${NC}"
+echo -e "  ${Blue}    3.)${NC}${w} ☞ On/Off limit $NC   ${Blue} 13.) ${NC}☞ Streaming Check${NC}"
+echo -e "  ${Blue}    4.)${NC}${w} ☞ Update Script $NC  ${Blue} 14.) ${NC}☞ Limit Speed  ${NC}    ${NC}"
+echo -e "  ${Blue}    5.)${NC}${NC} ☞ Restart Service $NC${Blue} 15.) ${NC}☞ Speed Test${NC}"
+echo -e "  ${Blue}    6.)${NC} ☞ Change Banner$NC   ${Blue} 16.)${NC} ☞ Auto Reboot ${NC}"
+echo -e "  ${Blue}    7.)${NC} ☞ Change Domain$NC   ${Blue} 17.)${NC} ☞ Info Port ${NC}"
+echo -e "  ${Blue}    8.)${NC} ☞ Check Bandwith$NC"      
+echo -e "  ${Blue}    9.)${NC} ☞ Clear Logs$NC"
+echo -e "  ${Blue}    10.)${NC} ☞ Clear Cache$NC"
+echo -e " ${NC}└─────────────────────────────────────────────────┘${NC}"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e " $PURPLE    Trima Kasih Telah Menggunakan AutoScript           $NC"
+echo -e "        $PURPLE          By Tekiro VPN $NC"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e ""
+read -p "  Select From Options [ 1 - 27 or 0 back to menu ] : " menu
+case $menu in
+1) clear ;
+    run
+    ;;
+2) clear ;
+    UDEPE
+    ;;
+3) clear ;
+    ml-ip
+    ;;    
+4) clear ;   
+    upsc
+    ;;
+5) clear ;    
+    reset
+    ;;
+6) clear ;   
+    nano /etc/lynz.txt
+    ;;
+7) clear ; 
+    addhost
+    ;;
+8) clear ;
+   bw
+   ;;
+9) clear ;
+   clearlog
+   ;;
+10) clear ;
+   clearcache
+   ;;
+11) clear ;
+   mbot
+   ;;
+12) clear ;
+   gotop
+    ;;
+13) clear ;
+   wget https://raw.githubusercontent.com/Jengkolonline/nonton/main/nf.sh && chmod +x nf.sh && ./nf.sh
+   ;;
+14) clear ;
+   limitspeed
+   ;;
+15) clear ;
+   speedtest
+   ;;
+16) clear ;
+   autoreboot
+   ;;
+17) clear ;
+   prot
+   ;;
+18) clear ;
+   wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp
+   ;;            
+0) clear ;
+   menu
+   ;;
+*) clear ;
+    menu
+    ;;
+esac

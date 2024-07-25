@@ -1,0 +1,49 @@
+#!/bin/bash
+# =========================================
+# Menu For Script
+# Edition : Stable Edition V2.0
+# Auther  : TekiroVpn X LynzVpn X ProfAmpoh
+# (C) Copyright 2023-2024
+# =========================================
+clear
+echo -e "\e[0m      ————————————————————————————————————————\e[0m"
+echo -e "   $PURPLE              PORT INFORMATION        $NC"
+echo -e "\e[0m      ————————————————————————————————————————\e[0m"
+echo -e "${NC}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "\e[0m│   - Open SSH                : 443, 80, 22       │"
+echo -e "\e[0m│   - Dropbear                : 443, 109, 143     │"
+echo -e "\e[0m│   - Dropbear Websocket      : 443, 109          │"
+echo -e "\e[0m│   - SSH Websocket SSL       : 443               │"
+echo -e "\e[0m│   - SSH Websocket           : 80                │"
+echo -e "\e[0m│   - OpenVPN SSL             : 443               │"
+echo -e "\e[0m│   - OpenVPN Websocket SSL   : 443               │"
+echo -e "\e[0m│   - OpenVPN TCP             : 443, 1194         │"
+echo -e "\e[0m│   - OpenVPN UDP             : 2200              │"
+echo -e "\e[0m│   - Nginx Webserver         : 443, 80, 81       │"
+echo -e "\e[0m│   - Haproxy Loadbalancer    : 443, 80           │"
+#echo -e "\e[0m│   - DNS Server              : 443, 53,      │"
+#echo -e "\e[0m│   - DNS Client              : 443, 88       │"
+echo -e "\e[0m│   - OpenVPN Websocket SSL   : 443               │"
+#echo -e "\e[0m│   - XRAY DNS (SLOWDNS)      : 443, 53       │"
+echo -e "\e[0m│   - XRAY Vmess TLS          : 443               │"
+echo -e "\e[0m│   - XRAY Vmess gRPC         : 443               │"
+echo -e "\e[0m│   - XRAY Vmess None TLS     : 80                │"
+echo -e "\e[0m│   - XRAY Vless TLS          : 443               │"
+echo -e "\e[0m│   - XRAY Vless gRPC         : 443               │"
+echo -e "\e[0m│   - XRAY Vless None TLS     : 80                │"
+echo -e "\e[0m│   - Trojan gRPC             : 443               │"
+echo -e "\e[0m│   - Trojan WS               : 443               │"
+echo -e "\e[0m│   - Shadowsocks WS          : 443               │"
+echo -e "\e[0m│   - BadVPN 1                : 7100              │"
+echo -e "\e[0m│   - BadVPN 2                : 7200              │"
+echo -e "\e[0m│   - BadVPN 3                : 7300              │"
+#echo -e "\e[0m│   - Proxy Squid             : 3128          │"
+echo -e "${NC}└─────────────────────────────────────────────────┘${NC}"
+echo -e "\e[0m  ———————————————————————————————————————————————\e[0m"
+echo -e " $PURPLE   Trima Kasih Telah Menggunakan AutoScript           $NC"
+echo -e "        $PURPLE         By Tekiro VPN $NC"
+echo -e "\e[0m  ———————————————————————————————————————————————\e[0m"
+echo -e "\e[0m      ————————————————————————————————————————\e[0m"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+utility

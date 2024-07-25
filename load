@@ -1,0 +1,19 @@
+#!/bin/bash
+spinner()
+{
+    local pid=$!
+    local delay=0.1
+    local spinstr='|/-\|'
+    while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+        local temp=${spinstr#?}
+        printf " [%c]  " "$spinstr"
+        local spinstr=$temp${spinstr%"$temp"}
+        sleep $delay
+        printf "\b\b\b\b\b\b"
+    done
+    printf "    \b\b\b\b"
+}
+
+echo "𝙋𝙧𝙤𝙨𝙚𝙨 𝙎𝙚𝙙𝙖𝙣𝙜 𝘽𝙚𝙧𝙟𝙖𝙡𝙖𝙣..."
+sleep 2.5 & spinner
+echo "𝙋𝙧𝙤𝙨𝙚𝙨 𝙎𝙚𝙡𝙚𝙨𝙖𝙞....."

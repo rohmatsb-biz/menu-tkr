@@ -1,0 +1,121 @@
+#!/bin/bash
+# =========================================
+# Menu For Script
+# Edition : Stable Edition V2.0
+# Auther  : TekiroVpn X LynzVpn X ProfAmpoh
+# (C) Copyright 2023-2024
+# =========================================
+#Color
+RED='\033[0;31m'
+NC='\e[0m'
+gray="\e[1;30m"
+PURPLE='\033[0;35m'
+Blue="\033[1;36m"
+GREEN='\033[0;32m'
+clear
+
+vmess=$(systemctl status vmip | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless=$(systemctl status vlip | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan=$(systemctl status trip | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+
+qtr=$(systemctl status limittrojan | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+qvm=$(systemctl status limitvmess | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+qvl=$(systemctl status limitvless | grep running | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+
+# STATUS SERVICE LIMIT IP
+if [[ $vmess == "running" ]]; then 
+   status_vm="${GREEN}Online$NC"
+   else
+   status_vm="${RED}Offline${NC} "
+fi
+if [[ $vless == "running" ]]; then 
+   status_vl="${GREEN}Online$NC"
+   else
+   status_vl="${RED}Offline${NC} "
+fi
+if [[ $trojan == "running" ]]; then 
+   status_tr="${GREEN}Online$NC"
+   else
+   status_tr="${RED}Offline${NC} "
+fi
+
+# // STATUS SERVICE LIMIT QUOTA 
+if [[ $qtr == "running" ]]; then 
+   status_trojan="${GREEN}Online$NC"
+   else
+   status_trojan="${RED}Offline${NC} "
+fi
+if [[ $qvm == "running" ]]; then 
+   status_vmess="${GREEN}Online$NC"
+   else
+   status_vmess="${RED}Offline${NC} "
+fi
+if [[ $qvl == "running" ]]; then 
+   status_vless="${GREEN}Online$NC"
+   else
+   status_vless="${RED}Offline${NC} "
+fi
+clear
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "   $PURPLE            MENU ON/OFF LIMIT                $NC"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "      ${Blue} Status Limit IP Vmess  :  $status_vm $NC"
+echo -e "      ${Blue} Status Limit IP Vless  :  $status_vl $NC"
+echo -e "      ${Blue} Status Limit IP Trojan :  $status_tr $NC"
+echo -e "      ${Blue} Status Limit Quota Vmess  :  $status_trojan $NC"
+echo -e "      ${Blue} Status Limit Quota Vless  :  $status_vless $NC"
+echo -e "      ${Blue} Status Limit Quota Trojan :  $status_trojan $NC"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "\e[0m     ————————————————————————————————————————\e[0m"
+echo -e "  ${Blue}    1.)${NC} ☞ Turn Off Limit IP $NC"
+echo -e "  ${Blue}    2.)${NC} ☞ Turn Off Limit QUOTA $NC"
+echo -e "  ${Blue}    3.)${NC} ☞ Turn On Limit IP $NC"
+echo -e "  ${Blue}    4.)${NC} ☞ Turn On Limit QUOTA $NC"
+echo -e "  ${Blue}    x.)${NC} ☞ Back To Menu $NC"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e " $PURPLE    Trima Kasih Telah Menggunakan AutoScript           $NC"
+echo -e "        $PURPLE          By Tekiro VPN $NC"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -p "  Select Menu From Options [ 1 - 4 or x ] : " limit
+echo ""
+if [[ $limit == "1" ]]; then
+load
+systemctl stop vmip
+systemctl stop vlip
+systemctl stop trip
+systemctl daemon-reload
+sleep 1
+ml-ip
+elif [[ $limit == "2" ]]; then
+load
+systemctl stop limitvless
+systemctl stop limitvmess
+systemctl stop limittrojan
+systemctl daemon-reload
+sleep 1
+ml-ip
+elif [[ $limit == "3" ]]; then
+load
+systemctl daemon-reload
+systemctl restart vmip
+systemctl restart vlip
+systemctl restart trip
+sleep 1
+ml-ip
+elif [[ $limit == "4" ]]; then
+load
+systemctl daemon-reload
+systemctl restart limitvless
+systemctl restart limitvmess
+systemctl restart limittrojan
+sleep 1
+ml-ip
+elif [[ $limit == "x" ]]; then
+menu
+else
+clear 
+echo -e "Input Degan Benar !" 
+sleep 2 
+ml-ip
+fi

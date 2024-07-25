@@ -1,0 +1,218 @@
+#!/bin/bash
+# =========================================
+# Menu For Script
+# Edition : Stable Edition V2.0
+# Auther  : TekiroVpn X LynzVpn X ProfAmpoh
+# (C) Copyright 2023-2024
+# =========================================
+MYIP=$(wget -qO- ifconfig eth0 | awk '/inet / {print $2}');
+echo "Checking VPS"
+# Color
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+Blue='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
+# ==========================================
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE            BANDWITH MONITORING      "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+echo -e "  ${Blue}  1.)${NC} ☞ Check Total Bandwith Tersisa$NC" 
+echo -e "  ${Blue}  2.)${NC} ☞ Check Bandwith Setiap 5 Menit$NC"
+echo -e "  ${Blue}  3.)${NC} ☞ Check Bandwith Setiap Jam $NC"
+echo -e "  ${Blue}  4.)${NC} ☞ Check Bandwith Setiap hari $NC"
+echo -e "  ${Blue}  5.)${NC} ☞ Check Bandwith Setiap Bulan $NC"
+echo -e "  ${Blue}  6.)${NC} ☞ Check Bandwith Setiap Tahun $NC"
+echo -e "  ${Blue}  7.)${NC} ☞ Check Bandwith Tertinggi $NC"
+echo -e "  ${Blue}  8.)${NC} ☞ Statistik Bandwith Setiap Jam $NC"
+echo -e "  ${Blue}  9.)${NC} ☞ Check Bandwith Aktif Saat ini $NC"
+echo -e "  ${Blue}  10.)${NC} ☞ Check Traffic Bandwith Saat ini $NC"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e " $PURPLE    Trima Kasih Telah Menggunakan AutoScript           $NC"
+echo -e "        $PURPLE          By Tekiro VPN $NC"
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "\e[0m      ————————————————————————————————————————\e[0m"
+echo -e ""
+read -p " Select menu : " opt
+echo -e ""
+case $opt in
+1)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE       Total Bandwith Tersisa          "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+2)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE       Total Bandwith Setiap 5 Mnit    "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -5
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+3)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Total Bandwith Setiap Jam     "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -h
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+4)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Total Bandwith Setiap Hari     "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -d
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+5)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Total Bandwith Setiap Bulan     "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -m
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+6)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Total Bandwith Setiap Tahun     "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -y
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+7)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Total Bandwith Tertinggi     "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -t
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+8)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE       Statistik Terpakai Setiap Jam    "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -hg
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+9)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Live Bandwith Saat Ini    "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e   " Press [ Ctrl+C ] • To-Exit"
+echo -e ""
+
+vnstat -l
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+10)
+clear 
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e "    $PURPLE         Live Traffic Bandwith    "
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+
+vnstat -tr
+
+echo -e ""
+echo -e "\e[0m   ———————————————————————————————————————————————\e[0m"
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+bw
+;;
+
+0)
+sleep 1
+menu
+;;
+x)
+exit
+;;
+*)
+echo -e ""
+echo -e "Tekan Yang Bener Dlogok"
+sleep 1
+bw
+;;
+esac
