@@ -51,7 +51,7 @@ clear
 # Valid Script
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-data_ip="https://raw.githubusercontent.com/Ryuchiii/izinkansaya/main/ip"
+data_ip="https://raw.githubusercontent.com/rohmatsb-biz/izinkansaya/main/ip"
 use=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $2}')
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
