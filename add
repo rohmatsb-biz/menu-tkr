@@ -8,7 +8,7 @@ GREEN='\033[0;32m'
 # Valid Script
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-data_ip="https://aio.tekirovpn.my.id/reseller"
+data_ip="https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/reseller"
 use=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $2}')
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
@@ -31,7 +31,7 @@ checking_sc() {
 }
 checking_sc
 clear
-Repo1="https://aio.tekirovpn.my.id/"
+Repo1="https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/"
 export MYIP=$( curl -s https://ipinfo.io/ip/ )
 SELLER=$(curl -sS ${Repo1}reseller | grep $MYIP | awk '{print $2}')
 Exp100=$(curl -sS ${Repo1}ip | grep $MYIP | awk '{print $3}')
@@ -144,7 +144,7 @@ echo -e "\e[0m——————————————————————
 <code>Registered On  : $today</code>
 <code>Expired On     : $exp2</code>
 <code>───────────────────────────</code>
-<code>apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && apt -y install xxd && apt install -y bzip2 && apt install -y curl && apt install -y zip unzip && apt install -y wget && apt install -y curl && apt install -y vim shc python python2 python3 && apt install socat -y ; apt install openssl -y ; wget https://aio.tekirovpn.my.id/run.sh && chmod +x run.sh && ./run.sh</code>
+<code>apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && apt -y install xxd && apt install -y bzip2 && apt install -y curl && apt install -y zip unzip && apt install -y wget && apt install -y curl && apt install -y vim shc python python2 python3 && apt install socat -y ; apt install openssl -y ; wget https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/run.sh && chmod +x run.sh && ./run.sh</code>
 "   
 echo -e "\e[0m————————————————————————————————————————\e[0m"
 echo -e "      $PURPLE  SUCCESS REGIST YOUR IP          $NC"
@@ -154,7 +154,7 @@ echo -e "${NC} ☞ IP ADDRESS : $ip $NC"
 echo -e "${NC} ☞ REGISTERED : $today $NC"
 echo -e "${NC} ☞ EXPIRED ON : $exp2 $NC"
 echo -e "\e[0m————————————————————————————————————————\e[0m"
-echo -e "${NC}apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && apt -y install xxd && apt install -y bzip2 && apt install -y curl && apt install -y zip unzip && apt install -y wget && apt install -y curl && apt install -y vim shc python python2 python3 && apt install socat -y ; apt install openssl -y ; wget https://aio.tekirovpn.my.id/run.sh && chmod +x run.sh && ./run.sh $NC"
+echo -e "${NC}apt update && apt upgrade -y --fix-missing && update-grub && sleep 2 && apt -y install xxd && apt install -y bzip2 && apt install -y curl && apt install -y zip unzip && apt install -y wget && apt install -y curl && apt install -y vim shc python python2 python3 && apt install socat -y ; apt install openssl -y ; wget https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/run.sh && chmod +x run.sh && ./run.sh $NC"
 echo -e "\e[0m————————————————————————————————————————\e[0m"
     echo -e ""
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT2&parse_mode=html" $URL >/dev/null

@@ -14,7 +14,7 @@ Blue="\033[1;36m"
 GREEN='\033[0;32m'
 
 BGX="\033[42m"
-UPDATE="https://aio.tekirovpn.my.id/"
+UPDATE="https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/"
 #BOT="https://raw.githubusercontent.com/myridwan/src/ipuk/"
 UDPX="https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1S3IE25v_fyUfCLslnujFBSBMNunDHDk2"
 clear

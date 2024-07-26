@@ -9,7 +9,7 @@ NC='\e[0m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://aio.tekirovpn.my.id/lynz.zip
+wget https://raw.githubusercontent.com/rohmatsb-biz/rohshop-tkr/main/lynz.zip
 unzip lynz.zip
 pip3 install -r lynz/requirements.txt
 
