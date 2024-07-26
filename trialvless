@@ -103,7 +103,7 @@ cat >/var/www/html/vless-$user.txt <<-END
 ————————————————————————————————————————
   T E K I R O   P R O J E C T 
 ————————————————————————————————————————
- https://github.com/Ryuchiii/aku
+ https://github.com/rohmatsb-biz/aku
 ————————————————————————————————————————
 # Format Vless WS TLS
 

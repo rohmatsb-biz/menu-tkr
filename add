@@ -57,10 +57,10 @@ yell='\e[33m'
 BGX="\033[42m"
 END='\e[0m'
 AKTIF="VERIFED"
-TOKEN="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"
-REPO="https://github.com/Ryuchiii/izinkansaya.git"
-EMAIL="tekirovpn@gmail.com"
-USER="Ryuchiii"
+TOKEN="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"
+REPO="https://github.com/rohmatsb-biz/izinkansaya.git"
+EMAIL="rohmatsb.biz@gmail.com"
+USER="rohmatsb-biz"
 
 
 add-ip() {
@@ -123,8 +123,8 @@ echo -e "\e[0m——————————————————————
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/Ryuchiii/izinkansaya
-    git push -f https://${TOKEN}@github.com/Ryuchiii/izinkansaya.git &> /dev/null
+    git remote add origin https://github.com/rohmatsb-biz/izinkansaya
+    git push -f https://${TOKEN}@github.com/rohmatsb-biz/izinkansaya.git &> /dev/null
     rm -rf /root/izinkansaya
     clear
     sleep 1
@@ -193,8 +193,8 @@ echo -e "   $PURPLE        DELETE IP VPS SUCCESS           $NC"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/Ryuchiii/izinkansaya
-    git push -f https://${TOKEN}@github.com/Ryuchiii/izinkansaya.git &> /dev/null
+    git remote add origin https://github.com/rohmatsb-biz/izinkansaya
+    git push -f https://${TOKEN}@github.com/rohmatsb-biz/izinkansaya.git &> /dev/null
     rm -rf /root/izinkansaya
     clear
     sleep 1
@@ -259,8 +259,8 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
     git add . &> /dev/null
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/Ryuchiii/izinkansaya
-    git push -f https://${TOKEN}@github.com/Ryuchiii/izinkansaya.git &> /dev/null
+    git remote add origin https://github.com/rohmatsb-biz/izinkansaya
+    git push -f https://${TOKEN}@github.com/rohmatsb-biz/izinkansaya.git &> /dev/null
     rm -rf /root/izinkansaya
     clear
     sleep 1
