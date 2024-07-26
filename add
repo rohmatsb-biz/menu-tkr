@@ -65,8 +65,8 @@ USER="rohmatsb-biz"
 
 add-ip() {
 TIMES="10"
-CHATID="5932540071"
-KEY="6478027776:AAGBRpE2Scyqsf8gHhVPukhREmD4CmaYgEI"
+CHATID="6713772874"
+KEY="7222807758:AAFRcqHHHUMaJL5n3oFXqtczZmbpOAJKwHQ"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 
@@ -162,8 +162,8 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 del-ip() {
 TIMES="10"
-CHATID="5932540071"
-KEY="6478027776:AAGBRpE2Scyqsf8gHhVPukhREmD4CmaYgEI"
+CHATID="6713772874"
+KEY="7222807758:AAFRcqHHHUMaJL5n3oFXqtczZmbpOAJKwHQ"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
     rm -rf /root/izinkansaya
@@ -227,8 +227,8 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 
 renew-ip() {
 TIMES="10"
-CHATID="5932540071"
-KEY="6478027776:AAGBRpE2Scyqsf8gHhVPukhREmD4CmaYgEI"
+CHATID="6713772874"
+KEY="7222807758:AAFRcqHHHUMaJL5n3oFXqtczZmbpOAJKwHQ"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
     rm -rf /root/izinkansaya
